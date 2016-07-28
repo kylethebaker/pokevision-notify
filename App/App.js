@@ -27,7 +27,7 @@ class App {
 			this.isScanning = true;
 			this.pokeCache = {};
 			
-			this._scanInterval = setInterval(() => this.scan(), 35000);
+			this._scanInterval = setInterval(() => this.scan(), this._pokemonService.scanInterval);
 			this.scan();
 		});
 		

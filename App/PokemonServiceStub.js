@@ -1,16 +1,9 @@
-class PokemonServiceStub {
-	getName(id) {
-		return [null, 'Bulbasaur', 'Ivysaur'][id];
-	}
+class PokemonServiceStub extends PokemonService {
 	
-	getSpriteUrl(id) {
-		return `http://ugc.pokevision.com/images/pokemon/${id}.png`;
+	getSpriteUrl(pokemonId) {
+		return `http://ugc.pokevision.com/images/pokemon/${pokemonId}.png`;
 	}
-	
-	getPokevisionUrl(lat, lon) {
-		return 'https://pokevision.com/';
-	}
-	
+
 	get(latitude, longitude) {
 		return Promise.resolve([{
 			id: 1,
